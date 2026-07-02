@@ -1,4 +1,4 @@
-.PHONY: help setup hooks install smoke-test status plugins
+.PHONY: help setup hooks install lock smoke-test status plugins
 
 help: ## Show all available targets
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-16s\033[0m %s\n", $$1, $$2}'
@@ -11,9 +11,11 @@ hooks: ## Enable git hook (protects main from direct commits)
 	git config core.hooksPath .githooks
 	@echo "-> core.hooksPath=.githooks set"
 
-install: ## Python environment (optional, for python/notebook skills)
-	python3 -m venv .venv
-	.venv/bin/pip install -r requirements.txt
+install: ## Sync Python environment via uv (optional, for python/notebook skills)
+	uv sync
+
+lock: ## Update the uv lockfile
+	uv lock
 
 smoke-test: ## Check framework setup
 	@bash setup/executions/smoke_test.sh

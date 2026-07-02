@@ -36,17 +36,27 @@ allowed_tools:
 - Function: `test_<scenario>_<expected>()`
 - Fixtures in `tests/conftest.py`
 
-## Tooling
+## Tooling (uv)
+
+Use [uv](https://docs.astral.sh/uv/) — not pip/venv directly. Deps live in `pyproject.toml`,
+pinned in `uv.lock` (committed).
 
 ```bash
-# Install
-pip install -e ".[dev]"
+# Sync the environment (creates .venv, installs deps + dev group from pyproject.toml)
+uv sync
+
+# Add dependencies
+uv add <package>          # runtime dependency
+uv add --dev <package>    # dev tooling
+
+# Run anything inside the project env (no manual activate)
+uv run python script.py
 
 # Lint + Format
-ruff check . --fix
-ruff format .
+uv run ruff check . --fix
+uv run ruff format .
 
 # Tests
-pytest -v
-pytest --cov=src --cov-report=term-missing
+uv run pytest -v
+uv run pytest --cov=src --cov-report=term-missing
 ```

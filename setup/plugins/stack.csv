@@ -55,6 +55,7 @@ graphify-usage,rule,tool,Use the codebase knowledge graph,.claude/rules/graphify
 Claude Code,tool,local,Agentic coding host,CLI/IDE,active,Prerequisite
 Git,tool,local,Version control + feature-branch flow,CLI,active,Enable core.hooksPath=.githooks
 GitHub CLI,tool,local,Issues/PRs/Projects/Releases,gh CLI,active,For gh-pm/github-project
-Python3,tool,local,Script/notebook execution,CLI (.venv),active,Optional (python/notebook skills)
+Python3,tool,local,Script/notebook execution,CLI (via uv),active,Optional (python/notebook skills)
+uv,tool,local,Python package + environment manager,CLI,active,Best-practice Python tooling (uv sync / uv run); replaces pip+venv
 Graphify,tool,local,Codebase knowledge graph,pipx,active,Optional
 Obsidian,tool,local,Markdown vault for docs/,Desktop App,active,Optional (docs/ is a vault)
