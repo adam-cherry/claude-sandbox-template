@@ -1,0 +1,4 @@
+{
+  "$schema": "https://raw.githubusercontent.com/anthropics/claude-code/main/packages/core/mcp-schema.json",
+  "mcpServers": {}
+}

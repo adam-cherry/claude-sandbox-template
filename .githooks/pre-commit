@@ -1,0 +1,30 @@
+#!/bin/sh
+#
+# pre-commit hook: Block direct commits to main branch.
+# All changes must go through feature/* branches and the /local-pr skill.
+# Exception: squash-merge commits (SQUASH_MSG exists after git merge --squash)
+#
+# Setup: git config core.hooksPath .githooks
+
+branch=$(git branch --show-current)
+
+if [ "$branch" = "main" ] || [ "$branch" = "master" ]; then
+  # Allow squash-merge commit (SQUASH_MSG exists after git merge --squash)
+  if [ -f "$(git rev-parse --git-dir)/SQUASH_MSG" ]; then
+    exit 0
+  fi
+  echo ""
+  echo "  BLOCKED: Direct commits to '$branch' are not allowed."
+  echo ""
+  echo "  Do it like this:"
+  echo "    1. git reset HEAD                               # Unstage files"
+  echo "    2. git stash                                    # Save changes"
+  echo "    3. git checkout -b feature/<description>        # Create feature branch"
+  echo "    4. git stash pop                                # Restore changes"
+  echo "    5. git add . && git commit -m 'wip: ...'        # Commit on feature branch"
+  echo "    6. When done: /local-pr                         # Local PR to main"
+  echo ""
+  echo "  Emergency: /break-glass (deliberately bypasses this hook, admin only)"
+  echo ""
+  exit 1
+fi

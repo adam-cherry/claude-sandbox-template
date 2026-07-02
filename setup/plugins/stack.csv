@@ -1,0 +1,60 @@
+name,type,category,purpose,access,status,notes
+superpowers,plugin,core,Engineering workflows (TDD/plans/debugging/worktrees),claude-plugins-official,active,Core plugin for structured work
+claude-mem,plugin,core,Persistent memory across sessions (SQLite + AI compression),thedotmack,active,Cross-session context
+context7,plugin,core,Fetch up-to-date library documentation,claude-plugins-official,active,Replaces stale training knowledge
+code-review,plugin,core,Code review for PRs and implementations,claude-plugins-official,active,Use after feature implementation
+code-simplifier,plugin,core,Simplify and refactor code,claude-plugins-official,active,After larger changes
+claude-md-management,plugin,core,Maintain and audit CLAUDE.md,claude-plugins-official,active,Capture learnings at session end
+skill-creator,plugin,core,Create/test/benchmark skills,claude-plugins-official,active,Required for new skills (skill-quality rule)
+claude-api,plugin,core,Claude API / Anthropic SDK / model reference,anthropic-agent-skills,active,API integration and Agent SDK
+github,plugin,core,GitHub workflows and automation,claude-plugins-official,active,PR/issue management
+git-workflow,plugin,core,Branching + conventional commits,netresearch-claude-code-marketplace,active,Complements git-workflow rule
+github-project,plugin,core,Branch protection / repo config,netresearch-claude-code-marketplace,active,PR/board diagnostics
+andrej-karpathy-skills,plugin,core,Behavioral guidelines (Karpathy),karpathy-skills,active,Coding principles
+chrome-devtools-mcp,plugin,core,Browser debugging via DevTools,claude-plugins-official,active,Frontend/perf debugging
+web-quality-skills,plugin,core,Lighthouse / a11y / performance,addy-web-quality-skills,active,Web quality
+mcp-server-dev,plugin,core,Build and bundle MCP servers,claude-plugins-official,active,See mcp-policy rule
+document-skills,plugin,core,PPTX / DOCX / PDF export,anthropic-agent-skills,active,Document generation
+frontend-design,plugin,core,Frontend / UI design guidance,claude-plugins-official,active,UI patterns
+security-guidance,plugin,core,Security best practices,claude-plugins-official,active,Security guardrails
+claude-code-setup,plugin,core,Claude Code configuration (hooks/skills/MCP),claude-plugins-official,active,Setup recommendations
+onboarding,skill,meta,Guided first-time setup (hook/.env/plugins/Obsidian/gh/git-flow/project.md),.claude/skills/onboarding,active,First-run walkthrough (/onboarding)
+looping,skill,workflow,Goal-based engineering loop (research->plan->validate->execute->verify->review),.claude/skills/looping,active,GSD successor; code and content track
+local-pr,skill,git,Feature branch -> main (validated squash merge),.claude/skills/local-pr,active,The only official path to main
+break-glass,skill,git,Emergency commit to main (bypasses pre-commit hook),.claude/skills/break-glass,active,Admin only
+new-spike,skill,workflow,Spike sandbox + docs for experiments,.claude/skills/new-spike,active,Exploratory work
+debugging,skill,code,Research-first debugging (root-cause/condition-based-waiting/defense-in-depth),.claude/skills/debugging,active,Methodology skill
+python,skill,code,Python conventions (type hints/Pydantic/pytest),.claude/skills/python,active,Stack-conditional
+docker,skill,code,Docker/Compose best practices,.claude/skills/docker,active,Stack-conditional
+powershell,skill,code,PowerShell automation best practices,.claude/skills/powershell,active,Stack-conditional
+notebook,skill,code,Run Jupyter notebooks + dependency handling,.claude/skills/notebook,active,Analysis
+release-tag,skill,git,Semver/date release tag + CHANGELOG,.claude/skills/release-tag,active,Release management
+where,skill,git,Status: branch/tag/ahead-behind,.claude/skills/where,active,Orientation
+recommend,skill,meta,Recommend the right skill/plugin/rule/agent,.claude/skills/recommend,active,Discovery
+update-context,skill,meta,Consolidate project context into a vNext snapshot,.claude/skills/update-context,active,Context maintenance
+promptify,skill,meta,Request -> copy-paste-ready prompt,.claude/skills/promptify,active,Prompt engineering
+gh-pm,skill,git,GitHub Issues + Projects (V2) via gh CLI,.claude/skills/gh-pm,active,Project management
+team-update,skill,docs,Outcome-style Slack/Teams update from git context,.claude/skills/team-update,active,Communication
+screen-input,skill,docs,Raw notes -> structured bullets,.claude/skills/screen-input,active,Intake
+excalidraw,skill,docs,Architecture diagrams as .excalidraw + PNG/SVG,.claude/skills/excalidraw,active,Diagrams
+html-presentation,skill,docs,HTML slide deck from Markdown (reveal.js),.claude/skills/html-presentation,active,Presentations
+git-workflow,rule,git,Branch model (main + feature/*),.claude/rules/git-workflow.md,active,Mandatory
+conventional-commits,rule,git,Commit format,.claude/rules/conventional-commits.md,active,Mandatory
+secrets-guardrails,rule,security,Never commit secrets; keep .env.example current,.claude/rules/secrets-guardrails.md,active,Mandatory
+mcp-policy,rule,mcp,No custom MCP servers; use existing ones via claude mcp add,.claude/rules/mcp-policy.md,active,Mandatory
+skill-ecosystem,rule,meta,Native Claude Code extensions only,.claude/rules/skill-ecosystem.md,active,Mandatory
+skill-quality,rule,meta,New skills via skill-creator; DRY,.claude/rules/skill-quality.md,active,Mandatory
+worktree-policy,rule,workflow,Worktrees only for parallel file-overlapping agents,.claude/rules/worktree-policy.md,active,Mandatory
+code-language,rule,code,Language convention (code vs docs),.claude/rules/code-language.md,active,Mandatory
+writing-style,rule,docs,Baseline style (buzzword blacklist/active voice),.claude/rules/writing-style.md,active,Mandatory
+anti-bias,rule,docs,Steelmanning/no over-engineering,.claude/rules/anti-bias.md,active,Mandatory
+no-placeholders,rule,docs,No draft markers in a release,.claude/rules/no-placeholders.md,active,Mandatory
+release-quality,rule,docs,Standalone artifacts without working-doc character,.claude/rules/release-quality.md,active,Mandatory
+persona-quality,rule,docs,Persona agents per CO-STAR + TIDD-EC,.claude/rules/persona-quality.md,active,Mandatory
+graphify-usage,rule,tool,Use the codebase knowledge graph,.claude/rules/graphify-usage.md,active,Optional (pipx install graphify)
+Claude Code,tool,local,Agentic coding host,CLI/IDE,active,Prerequisite
+Git,tool,local,Version control + feature-branch flow,CLI,active,Enable core.hooksPath=.githooks
+GitHub CLI,tool,local,Issues/PRs/Projects/Releases,gh CLI,active,For gh-pm/github-project
+Python3,tool,local,Script/notebook execution,CLI (.venv),active,Optional (python/notebook skills)
+Graphify,tool,local,Codebase knowledge graph,pipx,active,Optional
+Obsidian,tool,local,Markdown vault for docs/,Desktop App,active,Optional (docs/ is a vault)

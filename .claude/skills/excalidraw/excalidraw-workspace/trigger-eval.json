@@ -1,0 +1,22 @@
+[
+  {"query": "erstell mir ein Architektur-Diagramm der Azure Hub-Spoke Topologie als excalidraw", "should_trigger": true},
+  {"query": "ich brauch eine Visualisierung unserer Cloud-Infrastruktur - VNets, Peerings, Subscriptions", "should_trigger": true},
+  {"query": "generiere ein System-Diagramm das zeigt wie die Microservices zusammenhaengen", "should_trigger": true},
+  {"query": "kannst du das Netzwerk-Diagramm als excalidraw-Datei exportieren? Am besten auch als PNG", "should_trigger": true},
+  {"query": "visualize the codebase architecture - all services, databases, and their connections", "should_trigger": true},
+  {"query": "mach mir ein excalidraw fuer die Landing Zone Architektur mit allen Subscriptions und VNets", "should_trigger": true},
+  {"query": "konvertiere die bestehende .excalidraw Datei nach SVG und PNG fuer die Doku", "should_trigger": true},
+  {"query": "ich brauche ein Diagramm das die Datenflüsse zwischen den Application Zones zeigt", "should_trigger": true},
+  {"query": "erstelle ein Mermaid-Diagramm fuer die Netzwerk-Topologie", "should_trigger": false},
+  {"query": "fuehre einen QA-Review der Building Blocks Dokumentation durch", "should_trigger": false},
+  {"query": "konvertiere die Mermaid-Diagramme fuer Azure DevOps Wiki", "should_trigger": false},
+  {"query": "erstelle eine neue Wiki-Seite fuer die Deployment View Sektion", "should_trigger": false},
+  {"query": "zeig mir den aktuellen Sprint-Status auf dem Kanban Board", "should_trigger": false},
+  {"query": "pruefe ob die Netzwerk-Behauptungen im Assessment durch IaC belegt sind", "should_trigger": false},
+  {"query": "generiere einen Terraform-Plan fuer die neue Subscription", "should_trigger": false},
+  {"query": "erstell ein einfaches Flussdiagramm der CI/CD Pipeline als Bild", "should_trigger": true},
+  {"query": "ich will ein Whiteboard-Diagramm erstellen das die gesamte Holding-Struktur zeigt", "should_trigger": true},
+  {"query": "mach mir ein PNG von der aktuellen Architektur fuer die Praesentation", "should_trigger": true},
+  {"query": "schreib mir die Architektur-Doku fuer die Hub-Spoke Topologie", "should_trigger": false},
+  {"query": "zeig mir die Aenderungen im letzten Commit", "should_trigger": false}
+]

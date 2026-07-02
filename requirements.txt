@@ -1,0 +1,3 @@
+# Optional — for the python/notebook skills. Extend as needed.
+jupyter
+ipykernel
