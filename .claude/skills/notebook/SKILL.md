@@ -9,7 +9,7 @@ trigger: "When user asks to run, create, or fix a Jupyter notebook."
 ## Execution
 
 ```bash
-.venv/bin/jupyter nbconvert --to notebook --execute <notebook>.ipynb
+uv run jupyter nbconvert --to notebook --execute <notebook>.ipynb
 ```
 
 ## Cell 1 Setup (required)
@@ -30,5 +30,5 @@ sys.path.insert(0, str(Path.cwd().parent))
 ## Gotchas
 
 - `sys.path` is REQUIRED when imports from the project root are needed
-- Dependencies not in `requirements.txt`: install them in the setup cell
+- Dependencies not in `pyproject.toml`: add them with `uv add <package>` (preferred) or install in the setup cell
 - Relative paths always from the notebook location

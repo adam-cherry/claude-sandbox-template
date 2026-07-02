@@ -1,0 +1,18 @@
+# Project manifest for uv. This is a virtual project (not an installable package) —
+# a sandbox starting point. Add your real dependencies under [project.dependencies]
+# or keep dev-only tooling under [dependency-groups].
+[project]
+name = "claude-sandbox-template"
+version = "0.0.0"
+description = "Agnostic, batteries-included starting point for Claude Code."
+requires-python = ">=3.11"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "jupyter>=1.0",
+    "ipykernel>=6.0",
+]
+
+[tool.uv]
+package = false

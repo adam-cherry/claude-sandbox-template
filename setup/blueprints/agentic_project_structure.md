@@ -21,7 +21,8 @@ Before you start, check:
 - [ ] Git installed and configured
 - [ ] GitHub CLI installed (`gh auth login` done)
 - [ ] Node.js >= 18 (optional, for plugins/tooling)
-- [ ] Python 3.11+ with pipx (for Graphify)
+- [ ] uv (optional, for the Python/notebook skills — `uv sync` / `uv run`)
+- [ ] pipx (optional, for Graphify)
 
 ---
 
@@ -953,7 +954,7 @@ These skills are useful in every repo — not stack-conditional:
 
 | If the tech stack contains... | Recommend skill | Purpose |
 |-----------------------------|-----------------|-------|
-| Python | `python` | Type-first, Pydantic, FastAPI, pytest patterns |
+| Python | `python` | uv-managed, type-first, Pydantic, pytest patterns |
 | Docker / docker-compose | `docker` | Dockerfile best practices, Compose, health checks |
 | PowerShell | `powershell` | Module conventions, error handling, Pester |
 | Jupyter Notebooks | `notebook` | Execution, sys.path, formatting |

@@ -36,8 +36,8 @@ That's it. **`/onboarding`** walks you through everything else — verifying plu
 flow, optional GitHub CLI + Obsidian, and filling in your project config — one step at a time.
 Only the git hook and `.env` are required; the rest is optional.
 
-> **Requirements:** [Claude Code](https://claude.com/claude-code) + Git. Python, GitHub CLI and
-> Obsidian are optional and only needed for specific skills.
+> **Requirements:** [Claude Code](https://claude.com/claude-code) + Git. [uv](https://docs.astral.sh/uv/)
+> (Python), GitHub CLI and Obsidian are optional and only needed for specific skills.
 
 ## What's inside
 
